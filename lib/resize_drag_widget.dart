@@ -273,6 +273,9 @@ class _ResizeAndDragWidgetState extends State<ResizeAndDragWidget> {
                 endMoveOffset = updateMoveOffset;
               },
             ))
-        : getResizeable();
+        : Transform.translate(
+            offset: Offset(trW, trH),
+            child: getResizeable(),
+          );
   }
 }

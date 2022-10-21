@@ -1,12 +1,12 @@
 name: resize_drag_widget
-description: A new Flutter plugin project.
-version: 0.0.1
+description: 一个可拖拽来操作大小和位置的控件.
+version: 0.0.3
 homepage:
 
 environment:
   sdk: '>=2.18.2 <3.0.0'
   flutter: ">=2.5.0"
-
+repository: https://github.com/zhangweihong/resize_drag_widget
 dependencies:
   flutter:
     sdk: flutter
