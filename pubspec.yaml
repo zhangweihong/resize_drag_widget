@@ -1,6 +1,6 @@
 name: resize_drag_widget
 description: 一个可拖拽来操作大小和位置的控件.
-version: 0.0.3
+version: 0.0.4
 homepage:
 
 environment:
@@ -48,8 +48,8 @@ flutter:
       windows:
         pluginClass: ResizeDragWidgetPluginCApi
       web:
-        pluginClass: ResizeDragWidgetWeb
-        fileName: resize_drag_widget_web.dart
+        pluginClass: ResizableDraggableWidgetWeb
+        fileName: resizable_draggable_widget_web.dart
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

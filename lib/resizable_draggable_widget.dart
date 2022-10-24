@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-class ResizeAndDragWidget extends StatefulWidget {
-  const ResizeAndDragWidget(
+import 'resizable_draggable_widget_platform_interface.dart';
+
+class ResizableDraggableWidget extends StatefulWidget {
+  const ResizableDraggableWidget(
       {Key? key,
       this.initWidth,
       this.initHeight,
@@ -37,10 +39,15 @@ class ResizeAndDragWidget extends StatefulWidget {
   ///移动拖拽返回的数据
   final Function(double width, double height, Offset tranformOffset)? changed;
   @override
-  State<ResizeAndDragWidget> createState() => _ResizeAndDragWidgetState();
+  State<ResizableDraggableWidget> createState() =>
+      _ResizableDraggableWidgetState();
+
+  Future<String?> getPlatformVersion() {
+    return ResizableDraggableWidgetPlatform.instance.getPlatformVersion();
+  }
 }
 
-class _ResizeAndDragWidgetState extends State<ResizeAndDragWidget> {
+class _ResizableDraggableWidgetState extends State<ResizableDraggableWidget> {
   double _dynamicH = 0;
   double _dynamicW = 0;
 
@@ -61,6 +68,8 @@ class _ResizeAndDragWidgetState extends State<ResizeAndDragWidget> {
   Color? _bgColor;
   bool _showSquare = true;
   bool _draggable = true;
+
+  static registerWith(registrar) {}
 
   @override
   void initState() {

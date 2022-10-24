@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:resize_drag_widget/resize_drag_widget.dart';
+import 'package:resize_drag_widget/resizable_draggable_widget.dart';
+import 'package:flutter/foundation.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
 }
 
@@ -37,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text(widget.title),
         ),
         body: Container(
-          child: ResizeAndDragWidget(
+          child: ResizableDraggableWidget(
             initHeight: 300,
             initWidth: 300,
             showSquare: true,
