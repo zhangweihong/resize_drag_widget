@@ -1,6 +1,6 @@
-name: resize_drag_widget
+name: resizable_draggable_widget
 description: 一个可拖拽来操作大小和位置的控件.
-version: 0.0.4
+version: 0.0.5
 homepage:
 
 environment:
